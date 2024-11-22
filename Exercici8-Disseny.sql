@@ -1,0 +1,14 @@
+
+RENAME TABLE procurador TO advocat;
+
+ALTER TABLE assumpte
+ADD CONSTRAINT fk_id
+FOREIGN KEY (id) REFERENCES clients (id)
+ON DELETE CASCADE;
+
+ALTER TABLE advocat
+ADD CONSTRAINT fk_id
+FOREIGN KEY (id) REFERENCES clients(id)
+ON DELETE CASCADE;
+
+
